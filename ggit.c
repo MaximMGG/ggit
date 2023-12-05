@@ -6,7 +6,7 @@
 
 int main (int argc, char **argv) {
     if (argc < 2) {
-        fprintf(stderr, "ERROR: No args!");
+        fprintf(stderr, "ERROR: No args!\n");
         return 0 ;
     }
     
@@ -19,4 +19,6 @@ int main (int argc, char **argv) {
     strcat(command, "\"");
     system(command);
     system("git push origin master");
+
+    free(command);
 }
